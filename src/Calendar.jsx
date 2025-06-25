@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./calendar.css";
+import "./Calendar.css";
 import prevIcon from "./assets/previous.png";
 import nextIcon from "./assets/next.png";
 import EventSidebar from "./EventSidebar";
