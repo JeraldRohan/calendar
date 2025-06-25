@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Early Standup Meeting",
+    "date": "2025-06-26",
+    "startTime": "09:00",
+    "endTime": "09:30"
+  },
+  {
+    "title": "Client Presentation Prep",
+    "date": "2025-06-26",
+    "startTime": "10:00",
+    "endTime": "11:30"
+  },
+  {
+    "title": "Code Review: Module A",
+    "date": "2025-06-26",
+    "startTime": "14:00",
+    "endTime": "15:00"
+  },
+  {
+    "title": "UI Bug Fixing Session",
+    "date": "2025-06-27",
+    "startTime": "09:30",
+    "endTime": "11:00"
+  },
+  {
+    "title": "API Integration Testing",
+    "date": "2025-06-27",
+    "startTime": "11:30",
+    "endTime": "13:00"
+  },
+  {
+    "title": "Sprint Planning Meeting",
+    "date": "2025-06-27",
+    "startTime": "15:00",
+    "endTime": "16:00"
+  },
+  {
+    "title": "DevOps Sync Call",
+    "date": "2025-06-28",
+    "startTime": "10:00",
+    "endTime": "10:45"
+  },
+  {
+    "title": "Feature Deployment: V2.1",
+    "date": "2025-06-28",
+    "startTime": "11:00",
+    "endTime": "12:30"
+  },
+  {
+    "title": "Performance Optimization Review",
+    "date": "2025-06-28",
+    "startTime": "19:00",
+    "endTime": "19:30"
+  }
+]
