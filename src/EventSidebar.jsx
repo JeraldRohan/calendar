@@ -13,9 +13,7 @@ function EventSidebar({ selectedDate, events, onClear }) {
     <div className="event-sidebar">
       <div className="sidebar-header">
         <h3>
-          {selectedDate
-            ? `Events on ${formatDateIndian(selectedDate)}`
-            : "All Events"}
+          {selectedDate ? `Events on ${formatDateIndian(selectedDate)}` : "All Events"}
         </h3>
         {selectedDate && (
           <button className="close-btn" onClick={onClear} title="Show All Events">

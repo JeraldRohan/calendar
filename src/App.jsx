@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import HeaderBar from "./HeaderBar";
-import Calendar from "./calendar";
+import Calendar from "./Calendar";
 
 function App() {
   const [events, setEvents] = useState([]);
-  const [showSidebar, setShowSidebar] = useState(false); // sidebar visibility state
+  const [showSidebar, setShowSidebar] = useState(true);
 
   useEffect(() => {
     fetch("/events.json")
@@ -18,8 +18,15 @@ function App() {
 
   return (
     <>
-      <HeaderBar showSidebar={showSidebar} toggleSidebar={() => setShowSidebar((v) => !v)} />
-      <Calendar events={events} showSidebar={showSidebar} toggleSidebar={() => setShowSidebar(false)} />
+      <HeaderBar
+        showSidebar={showSidebar}
+        toggleSidebar={() => setShowSidebar((prev) => !prev)}
+      />
+      <Calendar
+        events={events}
+        showSidebar={showSidebar}
+        toggleSidebar={() => setShowSidebar(false)}
+      />
     </>
   );
 }

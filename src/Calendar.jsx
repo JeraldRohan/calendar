@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./calendar.css";
 import prevIcon from "./assets/previous.png";
 import nextIcon from "./assets/next.png";
-import events from "./events.json";
 import EventSidebar from "./EventSidebar";
 
 const WEEK_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-function Calendar() {
+function Calendar({ events, showSidebar, toggleSidebar }) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -28,7 +27,6 @@ function Calendar() {
   for (let i = 0; i < firstDayOfWeek; i++) calendarDays.push(null);
   for (let day = 1; day <= daysInMonth; day++) calendarDays.push(day);
 
-  // Map dates to their events
   const eventDatesMap = {};
   events.forEach((ev) => {
     if (!eventDatesMap[ev.date]) eventDatesMap[ev.date] = [];
@@ -66,7 +64,9 @@ function Calendar() {
           <button className="nav-button" onClick={goToPrevMonth} aria-label="Previous Month">
             <img src={prevIcon} alt="Previous" />
           </button>
-          <h2>{currentDate.toLocaleString("en-IN", { month: "long" })} {year}</h2>
+          <h2>
+            {currentDate.toLocaleString("en-IN", { month: "long" })} {year}
+          </h2>
           <button className="nav-button" onClick={goToNextMonth} aria-label="Next Month">
             <img src={nextIcon} alt="Next" />
           </button>
@@ -74,7 +74,9 @@ function Calendar() {
 
         <div className="calendar-grid">
           {WEEK_DAYS.map((wd) => (
-            <div key={wd} className="calendar-weekday">{wd}</div>
+            <div key={wd} className="calendar-weekday">
+              {wd}
+            </div>
           ))}
 
           {calendarDays.map((day, idx) => {
@@ -84,7 +86,9 @@ function Calendar() {
             return (
               <div
                 key={idx}
-                className={`calendar-day ${day === null ? "empty" : ""} ${isToday(day) ? "today" : ""}`}
+                className={`calendar-day ${day === null ? "empty" : ""} ${
+                  isToday(day) ? "today" : ""
+                }`}
                 onClick={() => day && setSelectedDate(dateStr)}
                 style={{ cursor: day ? "pointer" : "default" }}
               >
