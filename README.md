@@ -1,4 +1,4 @@
-Hosted link: https://jeraldrohan.github.io/calendar/
+Hosted link:[https://calendar-rohan.vercel.app/]
 
 Calendar Web Application
 A modern, interactive calendar web application designed to efficiently display, navigate, and manage events with a sleek, responsive UI and intuitive interactions.
